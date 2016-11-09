@@ -14,7 +14,7 @@ class Solution(object):
             return result
 
         i = 0
-        while i < len(str) and str[i] == "":
+        while i < len(str) and str[i] == " ":
             i += 1
 
         sign =  1
@@ -26,7 +26,6 @@ class Solution(object):
 
         while i < len(str) and str[i] >= '0' and str[i] <= '9':
             result = result * 10 + ord(str[i]) -ord('0')
-            print result
             if result > INT_MAX:
                 return INT_MAX if sign > 0 else INT_MIN
             i += 1
@@ -37,7 +36,7 @@ class Solution(object):
 if __name__ == "__main__":
     # print Solution().atoi("")
     # print Solution().atoi("-1")
-    print Solution().atoi("2147483647")
+    print Solution().atoi("     010")
     # print Solution().atoi("2147483648")
     # print Solution().atoi("-2147483647")
     # print Solution().atoi("-2147483648")
